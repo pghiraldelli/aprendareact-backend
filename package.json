@@ -1,0 +1,24 @@
+{
+  "name": "aprendareact-backend",
+  "version": "1.0.0",
+  "description": "Backend to the website aprendareact.com.br",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pghiraldelli/aprendareact-backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pghiraldelli/aprendareact-backend/issues"
+  },
+  "homepage": "https://github.com/pghiraldelli/aprendareact-backend#readme",
+  "devDependencies": {
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2"
+  }
+}
