@@ -4,7 +4,7 @@
         "node": true
     },
     "extends": [
-        "airbnb-base"
+        "eslint:recommended"
     ],
     "globals": {
         "Atomics": "readonly",
@@ -15,5 +15,10 @@
         "sourceType": "module"
     },
     "rules": {
+        "quotes": ["error", "single"],
+        "indent": ["error", 4],
+        "linebreak-style": ["error", "unix"],
+        "semi": ["error", "never"],
+        "eol-last": ["error", "always"]
     }
 }
