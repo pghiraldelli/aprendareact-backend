@@ -7,9 +7,9 @@ import cors from 'cors'
 const oneDayInMiliseconds = 24 * 60 * 60 * 100
 const cookieKey = 'holland seems cool what about winter'
 
-const app = express()
+const server = express()
 
-app.use(
+server.use(
     cookieSession({
         name: 'session',
         keys: ['secret'],
@@ -17,11 +17,11 @@ app.use(
     })
 )
 
-app.use(bodyParser.json())
+server.use(bodyParser.json())
 
-app.use(cookieParser(cookieKey))
+server.use(cookieParser(cookieKey))
 
-app.use(
+server.use(
     cors({
         origin: process.env.HOST,
         methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
@@ -29,4 +29,4 @@ app.use(
     })
 )
 
-export default app
+export default server
