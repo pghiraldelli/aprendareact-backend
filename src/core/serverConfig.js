@@ -10,11 +10,11 @@ const cookieKey = 'holland seems cool what about winter'
 const server = express()
 
 server.use(
-    cookieSession({
-        name: 'session',
-        keys: ['secret'],
-        maxAge: oneDayInMiliseconds
-    })
+  cookieSession({
+    name: 'session',
+    keys: ['secret'],
+    maxAge: oneDayInMiliseconds
+  })
 )
 
 server.use(bodyParser.json())
@@ -22,11 +22,11 @@ server.use(bodyParser.json())
 server.use(cookieParser(cookieKey))
 
 server.use(
-    cors({
-        origin: process.env.HOST,
-        methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-        credentials: true
-    })
+  cors({
+    origin: process.env.HOST,
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true
+  })
 )
 
 export default server

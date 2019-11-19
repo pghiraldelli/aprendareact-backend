@@ -1,4 +1,4 @@
 require('@babel/register')
-const server = require('./src/core/serverConfig').default
+const app = require('./src/app').default
 
-server.listen(8080, () => console.log('App running in port 8080'))
+app.listen(8080, () => console.log('App running in port 8080'))
