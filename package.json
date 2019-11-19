@@ -8,7 +8,7 @@
     "lint:fix": "npm run lint -- --fix",
     "start": "node index.js",
     "start:dev": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest test/"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,8 @@
     "@babel/preset-env": "^7.7.1",
     "@babel/register": "^7.7.0",
     "eslint": "^6.6.0",
+    "eslint-plugin-jest": "^23.0.4",
+    "jest": "^24.9.0",
     "nodemon": "^1.19.4"
   },
   "dependencies": {
