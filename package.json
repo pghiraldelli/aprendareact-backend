@@ -1,0 +1,40 @@
+{
+  "name": "aprendareact-backend",
+  "version": "1.0.0",
+  "description": "Backend to the website aprendareact.com.br",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint src/ index.js",
+    "lint:fix": "npm run lint -- --fix",
+    "start": "node index.js",
+    "start:dev": "nodemon index.js",
+    "test": "jest test/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pghiraldelli/aprendareact-backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pghiraldelli/aprendareact-backend/issues"
+  },
+  "homepage": "https://github.com/pghiraldelli/aprendareact-backend#readme",
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/register": "^7.7.0",
+    "eslint": "^6.6.0",
+    "eslint-plugin-jest": "^23.0.4",
+    "jest": "^24.9.0",
+    "nodemon": "^1.19.4",
+    "supertest": "^4.0.2"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "cookie-session": "^1.3.3",
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}
