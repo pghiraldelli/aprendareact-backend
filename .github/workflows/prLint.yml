@@ -1,0 +1,12 @@
+name: PR lint
+
+on: [pull_request]
+
+jobs:
+  pr-lint:
+    runs-on: ubuntu-latest
+    steps:
+    - name: run lint
+      run: |
+        npm ci
+        npm run lint
