@@ -6,7 +6,7 @@ import cors from 'cors'
 import passport from '../auth/google/auth-google'
 
 const oneDayInMiliseconds = 24 * 60 * 60 * 100
-const cookieKey = 'holland seems cool what about winter'
+const cookieKey = process.env.COOKIE_KEY
 
 const server = express()
 
