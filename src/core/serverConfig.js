@@ -31,6 +31,7 @@ server.use(
 )
 
 server.use(passport.initialize())
+server.use(passport.session())
 
 export {
   server,
