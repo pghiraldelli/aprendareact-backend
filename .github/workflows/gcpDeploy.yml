@@ -10,11 +10,13 @@ jobs:
       - uses: actions/checkout@v1
       - uses: actions-hub/gcloud@master
         env:
+          NODE_ENV: production
+          PORT: 8080
           PROJECT_ID: ${{secrets.GCLOUD_PROJECT_ID}}
           APPLICATION_CREDENTIALS: ${{secrets.GOOGLE_APPLICATION_CREDENTIALS}}
           GOOGLE_CLIENT_ID: ${{secrets.GOOGLE_CLIENT_ID}}
           GOOGLE_CLIENT_SECRET: ${{secrets.GOOGLE_CLIENT_SECRET}}
-          HOST: ${{secrets.GOOGLE_CLIENT_SECRET}}
+          HOST: ${{secrets.HOST}}
           COOKIE_KEY: ${{secrets.COOKIE_KEY}}
         with:
           args: app deploy deployments/app.yaml
