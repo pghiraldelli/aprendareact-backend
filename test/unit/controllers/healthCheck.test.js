@@ -5,14 +5,14 @@ describe('healthCheck controller', () => {
 
   beforeEach(() => {
     response = {
-      send: jest.fn()
+      sendStatus: jest.fn()
     }
     nextFn = jest.fn()
   })
 
   it('should return OK as status code and call next function', () => {
     healthCheck(null, response, nextFn)
-    expect(response.send).toHaveBeenCalledWith(200)
+    expect(response.sendStatus).toHaveBeenCalledWith(200)
     expect(nextFn).toHaveBeenCalled()
   })
 })

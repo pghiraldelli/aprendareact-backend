@@ -2,28 +2,26 @@
   "name": "aprendareact-backend",
   "version": "1.0.0",
   "description": "Backend to the website aprendareact.com.br",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "lint": "eslint src/ index.js",
+    "lint": "eslint src/ server.js",
     "lint:fix": "npm run lint -- --fix",
-    "start": "node index.js",
-    "start:dev": "nodemon index.js",
-    "test": "NODE_ENV=test jest test/"
+    "start": "node server.js",
+    "start:dev": "nodemon server.js",
+    "test": "NODE_ENV=test jest test/",
+    "test:all": "npm run lint && npm test"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pghiraldelli/aprendareact-backend.git"
   },
-  "author": "",
+  "author": "Patricia Ghiraldelli",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/pghiraldelli/aprendareact-backend/issues"
   },
   "homepage": "https://github.com/pghiraldelli/aprendareact-backend#readme",
   "devDependencies": {
-    "@babel/core": "^7.7.2",
-    "@babel/preset-env": "^7.7.1",
-    "@babel/register": "^7.7.0",
     "eslint": "^6.6.0",
     "eslint-plugin-jest": "^23.0.4",
     "jest": "^24.9.0",
@@ -32,6 +30,9 @@
     "supertest": "^4.0.2"
   },
   "dependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/register": "^7.7.0",
     "body-parser": "^1.19.0",
     "cookie-parser": "^1.4.4",
     "cookie-session": "^1.3.3",
@@ -40,5 +41,12 @@
     "express": "^4.17.1",
     "passport": "^0.4.0",
     "passport-google-oauth20": "^2.0.0"
+  },
+  "engines": {
+    "npm": "6.x",
+    "node": "12.x"
+  },
+  "directories": {
+    "test": "test"
   }
 }
