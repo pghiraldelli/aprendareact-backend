@@ -3,6 +3,7 @@ import cookieSession from 'cookie-session'
 import bodyParser from 'body-parser'
 import cookieParser from 'cookie-parser'
 import cors from 'cors'
+import passport from '../core/passportConfig'
 
 const oneDayInMiliseconds = 24 * 60 * 60 * 100
 const cookieKey = process.env.COOKIE_KEY
@@ -29,4 +30,10 @@ server.use(
   })
 )
 
-export default server
+server.use(passport.initialize())
+server.use(passport.session())
+
+export {
+  server,
+  passport
+} 
