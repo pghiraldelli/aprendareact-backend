@@ -1,4 +1,4 @@
-import { server as app, passport } from './core/serverConfig'
+import { server as app, passport } from './config/server'
 import healthCheck from './controllers/healthCheck'
 
 app.get('/health', healthCheck)
