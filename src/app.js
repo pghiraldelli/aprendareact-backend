@@ -8,8 +8,8 @@ app.get('/auth/google',
 
 app.get( '/auth/google/callback',
   passport.authenticate( 'google', {
-    successRedirect: 'https://www.aprendareact.com.br',
-    failureRedirect: 'https://www.aprendareact.com.br/fail'
+    successRedirect: `${process.env.HOST}/cursos/iniciando-em-react`,
+    failureRedirect: `${process.env.HOST}/login/failed`
   })
 )
 
