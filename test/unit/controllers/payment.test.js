@@ -10,7 +10,7 @@ describe('payment controller', () => {
   
   beforeEach(() => {
     response = {
-      sendStatus: jest.fn(),
+      status: jest.fn(),
       json: jest.fn()
     }
     nextFn = jest.fn()
@@ -27,7 +27,8 @@ describe('payment controller', () => {
       await payment(request, response, nextFn)
   
       expect(doPayment.default).toHaveBeenCalledWith({})
-      expect(response.json).toHaveBeenCalledWith(200, { 
+      expect(response.status).toHaveBeenCalledWith(200)
+      expect(response.json).toHaveBeenCalledWith({ 
         paymentStatus: 'approved' 
       })
       expect(nextFn).toHaveBeenCalled()
@@ -39,7 +40,8 @@ describe('payment controller', () => {
       await payment(request, response, nextFn)
   
       expect(doPayment.default).toHaveBeenCalledWith({})
-      expect(response.json).toHaveBeenCalledWith(500, {
+      expect(response.status).toHaveBeenCalledWith(500)
+      expect(response.json).toHaveBeenCalledWith({
         message: 'There was an error when trying to pay. Please, try again.'
       })
       expect(nextFn).toHaveBeenCalled()
