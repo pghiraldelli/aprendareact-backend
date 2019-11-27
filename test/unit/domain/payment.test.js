@@ -27,4 +27,8 @@ describe('payment domain', () => {
     const result = await doPayment(body)
     expect(result).toEqual({})
   })
+
+  it('should throw error if body not found', async () => {
+    await expect(doPayment({})).rejects.toThrow()
+  })
 })
